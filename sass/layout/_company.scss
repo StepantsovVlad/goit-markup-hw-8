@@ -1,0 +1,56 @@
+.company__name {
+  margin-bottom: 50px;
+  font-family: Roboto;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 42px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: rgba(33, 33, 33, 1);
+}
+
+.company {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.company__logo-list {
+  display: flex;
+}
+.company__logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+  background-color: #ffffff;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  border: 1px;
+  border-color: rgba(175, 177, 184, 1);
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-bottom: 0;
+  &:hover,
+  &:focus {
+    border-color: #2196f3;
+  }
+  &:hover .company__logo-icon,
+  &:focus .company__logo-icon {
+    fill: rgba(33, 150, 243, 1);
+  }
+}
+.company__logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.company__logo-icon {
+  fill: rgba(175, 177, 184, 1);
+  transition: background-color 250ms linear, fill 250ms linear;
+}

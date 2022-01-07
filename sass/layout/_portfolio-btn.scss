@@ -1,0 +1,30 @@
+.buttons-line {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  & :not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+.section-portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  .buttons-line__buttons {
+    font-family: roboto, sans-serif;
+    background-color: rgba(245, 244, 250, 1);
+    border-radius: 4px;
+    color: var(--title-text-collor);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    padding: 6px 22px;
+    border: none;
+    transition: background-color 250ms linear, color 250ms linear;
+  }
+  & .buttons-line__buttons:hover,
+  & .buttons-line__buttons:focus {
+    background-color: #2196f3;
+    color: var(--white-collor);
+  }
+}

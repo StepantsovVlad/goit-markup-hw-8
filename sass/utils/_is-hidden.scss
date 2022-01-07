@@ -1,0 +1,13 @@
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.visually-hidden {
+  visibility: hidden;
+}
+.dell {
+  display: none;
+  font-size: 0;
+}

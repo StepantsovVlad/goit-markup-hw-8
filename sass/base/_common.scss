@@ -1,0 +1,9 @@
+body {
+  background-color: var(--white-collor);
+  color: var(--primary-text-collor);
+  font-family: roboto, sans-serif;
+}
+.content-line {
+  display: flex;
+  flex-wrap: wrap;
+}
