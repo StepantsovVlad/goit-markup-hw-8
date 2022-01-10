@@ -1,27 +1,43 @@
 .company__name {
   margin-bottom: 50px;
   font-family: Roboto;
-  font-size: 36px;
+  font-size: 28px;
+  line-height: 1.17px;
   font-style: normal;
   font-weight: 700;
-  line-height: 42px;
   letter-spacing: 0.03em;
   text-align: center;
   color: rgba(33, 33, 33, 1);
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    line-height: 1.16px;
+  }
 }
 
 .company {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-left: 0;
+  margin-right: 0;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .company__logo-list {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-sizing: border-box;
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+  }
 }
 .company__logo-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 170px;
+  width: 210px;
   height: 92px;
   background-color: #ffffff;
   margin-bottom: 30px;
@@ -40,13 +56,23 @@
   &:focus .company__logo-icon {
     fill: rgba(33, 150, 243, 1);
   }
+  @media screen and (min-width: 768px) {
+    width: 226px;
+  }
 }
 .company__logo-item {
   display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  justify-content: space-between;
   align-items: center;
   justify-content: center;
-  &:not(:last-child) {
-    margin-right: 30px;
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+    flex-wrap: nowrap;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
 

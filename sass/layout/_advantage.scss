@@ -1,32 +1,76 @@
 .section-advantage {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-.advantage {
-  display: flex;
-  .advantage__list {
-    width: 270px;
-  }
-  & .advantage__list:not(:last-child) {
-    margin-right: 30px;
-  }
-  .advantage__meaning {
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--title-text-collor);
-    margin-bottom: 10px;
-  }
-  .advantage__example {
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  justify-content: center;
+  align-items: center;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
+.advantage {
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+.advantage__list {
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+    width: calc(100% / 2 - 30px);
+    margin-right: 30px;
+
+    &:nth-child(2n + 2) {
+      margin-right: 0;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-left: 0;
+      margin-bottom: 0;
+      margin-right: 0;
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+  }
+}
+
+.advantage__meaning {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--title-text-collor);
+  text-align: center;
+  margin-bottom: 10px;
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
+}
+
+.advantage__example {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  margin-left: 0;
+  margin-top: 0;
+  text-align: left;
+}
+
 .advantage__logo-lits {
+  justify-content: center;
+  align-items: center;
   display: flex;
 }
 
@@ -34,12 +78,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 270px;
   height: 120px;
   background-color: #f5f4fa;
   margin-bottom: 30px;
   border-radius: 4px;
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
 }
