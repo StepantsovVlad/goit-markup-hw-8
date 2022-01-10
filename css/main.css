@@ -266,12 +266,18 @@ a {
   padding-bottom: 48px;
 }
 
-.mob-menu .conteiner {
+.conteiner {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  margin-left: 40px;
+  margin-left: 30px;
+}
+
+@media screen and (min-width: 450px) {
+  .conteiner {
+    margin-left: 40px;
+  }
 }
 
 .close-menu-btn {
@@ -310,11 +316,17 @@ a {
 .mob-menu-contacts__tel {
   display: block;
   font-weight: 500;
-  font-size: 34px;
+  font-size: 30px;
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: #2196f3;
   margin-bottom: 32px;
+}
+
+@media screen and (min-width: 450px) {
+  .mob-menu-contacts__tel {
+    font-size: 32px;
+  }
 }
 
 .mob-menu-contacts__mail {
@@ -335,17 +347,31 @@ a {
 
 .mob-social-list__link {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 13px;
   line-height: 22px;
   letter-spacing: 0.02em;
   color: #2196f3;
   margin-bottom: 0;
 }
 
+@media screen and (min-width: 450px) {
+  .mob-social-list__link {
+    font-size: 18px;
+  }
+}
+
 .mob-social-list__item:not(:last-child) {
-  margin-right: 10px;
+  margin-right: 5px;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
-  padding-right: 10px;
+  padding-right: 5px;
+}
+
+@media screen and (min-width: 450px) {
+  .mob-social-list__item:not(:last-child) {
+    margin-right: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    padding-right: 10px;
+  }
 }
 
 .open-menu__icons:focus, .open-menu__icons:hover {
@@ -532,7 +558,7 @@ p {
 }
 
 .online-form__input {
-  width: 358px;
+  width: 100%;
   height: 50px;
   padding-left: 16px;
   background-color: transparent;
@@ -554,6 +580,7 @@ p {
 @media screen and (min-width: 768px) {
   .online-form__input {
     display: flex;
+    width: 358px;
   }
 }
 
@@ -966,7 +993,7 @@ h1 {
   margin-bottom: 50px;
   font-family: Roboto;
   font-size: 28px;
-  line-height: 1.17px;
+  line-height: 1.17;
   font-style: normal;
   font-weight: 700;
   letter-spacing: 0.03em;
@@ -977,7 +1004,7 @@ h1 {
 @media screen and (min-width: 1200px) {
   .company__name {
     font-size: 36px;
-    line-height: 1.16px;
+    line-height: 1.16;
   }
 }
 
@@ -995,11 +1022,13 @@ h1 {
   }
 }
 
-.company__logo-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  box-sizing: border-box;
+@media screen and (min-width: 450px) {
+  .company__logo-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1081,7 +1110,7 @@ h1 {
   margin-right: 8px;
 }
 
-.buttons-line__list:nth-child(5n + 1) {
+.buttons-line__list:nth-child(2n + 1) {
   margin-bottom: 10px;
 }
 
@@ -1139,7 +1168,7 @@ h1 {
   margin-right: 8px;
 }
 
-.buttons-line__list:nth-child(5n + 1) {
+.buttons-line__list:nth-child(2n + 1) {
   margin-bottom: 10px;
 }
 
@@ -1192,12 +1221,15 @@ h1 {
   justify-content: space-between;
 }
 
-.content-line:child(:last-child) {
+.content-line:nth-child(9) {
   margin-bottom: 0;
 }
 
-.content-line .content-line__list {
-  margin-top: 0;
+.content-line__text {
+  height: 100vh;
+}
+
+.content-line__list {
   margin-bottom: 30px;
   border: 1px solid #eeeeee;
   offset: 0px, 1px;
@@ -1205,8 +1237,11 @@ h1 {
   position: relative;
 }
 
-.content-line .content-line__list:focus,
-.content-line .content-line__list:hover {
+.content-line__list :last-child {
+  margin-bottom: 0;
+}
+
+.content-line__list.content-line__list:focus, .content-line__list.content-line__list:hover {
   box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
 
@@ -1230,6 +1265,7 @@ h1 {
 .content-line__text-wrap {
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .content-line__text {
@@ -1239,6 +1275,7 @@ h1 {
   font-size: 18px;
   line-height: 1.5;
   padding: 63px 24px;
+  margin-top: 0;
   color: #ffffff;
   background-color: rgba(33, 150, 243, 0.9);
   height: 100%;
@@ -1262,7 +1299,7 @@ h1 {
 }
 
 .modal {
-  width: 450px;
+  width: 100%;
   max-height: 609px;
   background-color: #ffffff;
   border-radius: 4px;
@@ -1273,8 +1310,17 @@ h1 {
   transform: scale(1) rotate(0) translate(-50%, -50%);
 }
 
+@media screen and (min-width: 480px) {
+  .modal {
+    max-width: none;
+    width: 450px;
+    min-height: 609px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .modal {
+    max-width: none;
     width: 528px;
     min-height: 581px;
   }
