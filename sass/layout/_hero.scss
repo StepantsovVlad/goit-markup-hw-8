@@ -65,11 +65,15 @@
 h1 {
   font-weight: 900;
 
-  font-size: 24px;
+  font-size: 26px;
   line-height: 1.61;
   color: var(--white-collor);
   text-transform: uppercase;
   margin-bottom: 30px;
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    line-height: 1.5;
+  }
 }
 
 .hero__buttons {

@@ -10,9 +10,6 @@
   &:nth-child(9) {
     margin-bottom: 0;
   }
-  @media screen and (min-width: 480px) {
-    justify-content: space-between;
-  }
 }
 
 .content-line__text {
@@ -20,9 +17,7 @@
   text-align: start;
 }
 .content-line__list {
-  &:not(:last-child) {
-    margin-bottom: 30px;
-  }
+  border: 1px solid rgba(238, 238, 238, 1);
   offset: 0px, 1px;
   transition: background-color 250ms linear, color 250ms linear,
     box-shadow 250ms linear;
@@ -32,9 +27,27 @@
     box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
       0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
   }
-  @media screen and (min-width: 480px) {
-    &:nth-child(1n + 7) {
-      margin-bottom: 0;
+  &:not(:first-child) {
+    margin-top: 30px;
+  }
+  @media screen and (min-width: 768px) {
+    &:nth-child(2) {
+      margin-top: 0;
+    }
+    &:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &:nth-child(3) {
+      margin-top: 0;
+    }
+    &:nth-child(2n + 1) {
+      margin-right: 0;
+    }
+    &:nth-child(3n),
+    &:nth-child(3n - 1) {
+      margin-left: 30px;
     }
   }
 }

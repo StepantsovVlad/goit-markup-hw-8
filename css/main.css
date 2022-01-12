@@ -23,8 +23,8 @@
 .container {
   box-sizing: border-box;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
   margin: 0 auto;
 }
 
@@ -36,7 +36,7 @@
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 758px;
+    width: 768px;
   }
 }
 
@@ -701,11 +701,18 @@ p {
 
 h1 {
   font-weight: 900;
-  font-size: 24px;
+  font-size: 26px;
   line-height: 1.61;
   color: var(--white-collor);
   text-transform: uppercase;
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-size: 44px;
+    line-height: 1.5;
+  }
 }
 
 .hero__buttons {
@@ -770,13 +777,9 @@ h1 {
 }
 
 @media screen and (min-width: 768px) and (min-width: 1200px) {
-  .advantage__list {
-    margin-left: 0;
-    margin-bottom: 0;
-    margin-right: 0;
-  }
   .advantage__list:not(:last-child) {
     margin-right: 30px;
+    margin-bottom: 0;
   }
 }
 
@@ -866,9 +869,9 @@ h1 {
 }
 
 .section-line__text {
+  display: flex;
   width: 370px;
   height: 70px;
-  padding-top: 27px;
   color: #ffffff;
   left: 0;
   bottom: 0;
@@ -878,7 +881,8 @@ h1 {
   font-style: normal;
   font-weight: 700;
   line-height: 1.17;
-  text-align: center;
+  align-items: center;
+  justify-content: center;
   background-color: rgba(47, 48, 58, 0.8);
 }
 
@@ -1151,12 +1155,18 @@ h1 {
   margin-right: 8px;
 }
 
-.buttons-line__list:nth-child(2n + 1) {
+.buttons-line__list:nth-child(4n + 1) {
   margin-bottom: 10px;
 }
 
 .buttons-line__list:nth-child(1n + 4) {
   margin-bottom: 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .buttons-line__list:nth-child(1n + 1) {
+    margin-bottom: 0px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1213,12 +1223,18 @@ h1 {
   margin-right: 8px;
 }
 
-.buttons-line__list:nth-child(2n + 1) {
+.buttons-line__list:nth-child(4n + 1) {
   margin-bottom: 10px;
 }
 
 .buttons-line__list:nth-child(1n + 4) {
   margin-bottom: 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .buttons-line__list:nth-child(1n + 1) {
+    margin-bottom: 0px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1274,34 +1290,44 @@ h1 {
   margin-bottom: 0;
 }
 
-@media screen and (min-width: 480px) {
-  .content-line {
-    justify-content: space-between;
-  }
-}
-
 .content-line__text {
   height: 100vh;
   text-align: start;
 }
 
 .content-line__list {
+  border: 1px solid #eeeeee;
   offset: 0px, 1px;
   transition: background-color 250ms linear, color 250ms linear, box-shadow 250ms linear;
   position: relative;
-}
-
-.content-line__list:not(:last-child) {
-  margin-bottom: 30px;
 }
 
 .content-line__list.content-line__list:focus, .content-line__list.content-line__list:hover {
   box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
 
-@media screen and (min-width: 480px) {
-  .content-line__list:nth-child(1n + 7) {
-    margin-bottom: 0;
+.content-line__list:not(:first-child) {
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .content-line__list:nth-child(2) {
+    margin-top: 0;
+  }
+  .content-line__list:nth-child(2n + 1) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .content-line__list:nth-child(3) {
+    margin-top: 0;
+  }
+  .content-line__list:nth-child(2n + 1) {
+    margin-right: 0;
+  }
+  .content-line__list:nth-child(3n), .content-line__list:nth-child(3n - 1) {
+    margin-left: 30px;
   }
 }
 
